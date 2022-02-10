@@ -132,7 +132,7 @@
 
 
     
-<header class="p-1 bg-yellow">
+<header class="p-1 bg-yellow noPrint">
     <nav role="navigation">
       <div id="div_top_bar" class="row">
         <div class="col-md-3 justify-content-start">
@@ -142,7 +142,7 @@
         </div>
         <div id="div_top_bar_right" class="col-md-auto d-flex justify-content-center">
           ✍
-          <select name="transliterationDropdown" size="1" onchange="module_transliteration.updateTransliteration()">
+          <select id="transliterationDropdown" size="1" onchange="module_transliteration.updateTransliteration()">
             <optgroup label="🌍">
               <option value="iso">āISO</option>
               <option value="cyrillic">пу</option>
@@ -175,16 +175,18 @@
             </optgroup>
           </select>
           🗨:
-          <select name="commentStyleDropdown" size="1" onchange="module_main.default.updateCommentStyleFromDropdown()">
+          <select id="commentStyleDropdown" size="1" onchange="module_main.default.updateCommentStyleFromDropdown()">
             <option value="on">✔</option>
             <option value="hidden">✗</option>
           </select>
-          <div><a  name="speakerButton" class="btn btn-secondary" onclick="module_main.default.handleSpeakToggle()">🎧️</a></div>
+          <div><a id="expandAllButton" class="btn btn-secondary" onclick="module_main.default.query.setParamAndGo('expandAll', 'true')">↕️️</a></div>
+          <div><a id="printButton" class="btn btn-secondary" onclick="module_main.default.query.setParamAndGo('printLayout', 'on')">🖨️️</a></div>
+          <div><a id="speakerButton" class="btn btn-secondary" onclick="module_main.default.handleSpeakToggle()">🎧️</a></div>
         </div>
         <div class="row col  d-flex justify-content-center">
           <a href="/full_search"  class="btn btn-secondary">🥽🔦</a>
-          <div><a  name="previousPage" href="" class="btn btn-secondary">###<i class="fas fa-caret-left"></i></a></div>
-          <div ><a name="nextPage" href="" class="btn btn-secondary"><i class="fas fa-caret-right"></i> ### </a></div>
+          <div><a id="previousPage" href="" class="btn btn-secondary">###<i class="fas fa-caret-left"></i></a></div>
+          <div ><a id="nextPage" href="" class="btn btn-secondary"><i class="fas fa-caret-right"></i> ### </a></div>
         </div>
         <ul id="top-bar-right-custom" class="list-group list-group-horizontal">
         </ul>
@@ -195,7 +197,7 @@
     
     <div class="row" name="contentRow">
       
-      <aside class="col-md-3 card border " id="sidebar">
+      <aside class="col-md-3 card border noPrint " id="sidebar">
           <div id="fastSearch">
               <input id="searchInput" placeholder="शीर्षिकान्विष्यताम्"  tabindex="0">
           </div>
@@ -213,12 +215,12 @@
 <header class='border d-flex justify-content-between'>
     <h1 id="&#43;06 Indian Calendar">&#43;06 Indian Calendar</h1>
     
-    <a id="editLink" class="btn btn-primary"  href="https://github.com/vishvAsa/jyotiSham/edit/content/history/calendar_reform_comittee_report/04_PART_C_History_of_the_Calendar_in_different_Countries_through_the_Ages/06_Indian_Calendar/_index.md"><i class="fas fa-edit"></i></a>
+    <a id="editLink" class="btn btn-primary noPrint"  href="https://github.com/vishvAsa/jyotiSham/edit/content/history/calendar_reform_comittee_report/04_PART_C_History_of_the_Calendar_in_different_Countries_through_the_Ages/06_Indian_Calendar/_index.md"><i class="fas fa-edit"></i></a>
     
 </header>
 <main>
     <article>
-  <aside id="toc_card" class="card border ">
+  <aside id="toc_card" class="card border noPrint ">
     <div id="toc_header" class="card-title border d-flex justify-content-between">
         <a data-toggle="collapse" href="#toc_body" role="button" aria-expanded="true" aria-controls="toc_body">
           What's in this page? <i class="fas fa-caret-down"></i> </a>
@@ -246,7 +248,7 @@
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/jyotiSham/history/calendar_reform_comittee_report/04_PART_C_History_of_the_Calendar_in_different_Countries_through_the_Ages/06_Indian_Calendar/">&#43;06 Indian Calendar </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -272,7 +274,7 @@
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/jyotiSham/history/calendar_reform_comittee_report/04_PART_C_History_of_the_Calendar_in_different_Countries_through_the_Ages/06_Indian_Calendar/01_THE_PERIODS_IN_INDIAN_HISTORY/">01 THE PERIODS IN INDIAN HISTORY </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -295,7 +297,7 @@
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/jyotiSham/history/calendar_reform_comittee_report/04_PART_C_History_of_the_Calendar_in_different_Countries_through_the_Ages/06_Indian_Calendar/02_CALENDAR_IN_THE_RIG-VEDIC_AGE/">02 CALENDAR IN THE RIG-VEDIC AGE </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -318,7 +320,7 @@
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/jyotiSham/history/calendar_reform_comittee_report/04_PART_C_History_of_the_Calendar_in_different_Countries_through_the_Ages/06_Indian_Calendar/03_CALENDARIC_REFERENCES_IN_THE_YAJUR_VEDIC_LITERATURE/">03 CALENDARIC REFERENCES IN THE YAJUR VEDIC LITERATURE </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -341,7 +343,7 @@
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/jyotiSham/history/calendar_reform_comittee_report/04_PART_C_History_of_the_Calendar_in_different_Countries_through_the_Ages/06_Indian_Calendar/04_THE_VEDANGA_JYOTISHA_CALENDAR/">04 THE Vedānga Jyōtiṣa CALENDAR </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -364,7 +366,7 @@
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/jyotiSham/history/calendar_reform_comittee_report/04_PART_C_History_of_the_Calendar_in_different_Countries_through_the_Ages/06_Indian_Calendar/05_INSCRIPTIONAL_RECORDS_ABOUT_CALENDAR/">05 INSCRIPTIONAL RECORDS ABOUT CALENDAR </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -387,7 +389,7 @@
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/jyotiSham/history/calendar_reform_comittee_report/04_PART_C_History_of_the_Calendar_in_different_Countries_through_the_Ages/06_Indian_Calendar/06_SOLAR_CALENDAR_IN_THE_SiddhAnta_JYOTISHA_PERIOD/">06 SOLAR CALENDAR IN THE SiddhAnta JYOTISHA PERIOD </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -410,7 +412,7 @@
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/jyotiSham/history/calendar_reform_comittee_report/04_PART_C_History_of_the_Calendar_in_different_Countries_through_the_Ages/06_Indian_Calendar/07_THE_LUNAR_CALENDAR_IN_THE_SiddhAnta_JYOTISHA_PERIOD/">07 THE LUNAR CALENDAR IN THE SiddhAnta JYOTISHA PERIOD </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -433,7 +435,7 @@
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/jyotiSham/history/calendar_reform_comittee_report/04_PART_C_History_of_the_Calendar_in_different_Countries_through_the_Ages/06_Indian_Calendar/08_INDIAN_ERAS/">08 INDIAN ERAS </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -456,7 +458,7 @@
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/jyotiSham/history/calendar_reform_comittee_report/04_PART_C_History_of_the_Calendar_in_different_Countries_through_the_Ages/06_Indian_Calendar/09_AP_5A_The_Seasons/">09 AP 5A The Seasons </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -479,7 +481,7 @@
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/jyotiSham/history/calendar_reform_comittee_report/04_PART_C_History_of_the_Calendar_in_different_Countries_through_the_Ages/06_Indian_Calendar/10_AP_5-B_Zero-point_of_the_Hindu_Zodiac/">10 AP 5-B Zero-point of the Hindu Zodiac </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -502,7 +504,7 @@
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/jyotiSham/history/calendar_reform_comittee_report/04_PART_C_History_of_the_Calendar_in_different_Countries_through_the_Ages/06_Indian_Calendar/11_APPENDIX_5-C_Gnomon_Measurements_in_Aitareya_Brahmana/">11 APPENDIX 5-C Gnomon Measurements in Aitareya Brahmana </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -525,7 +527,7 @@
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/jyotiSham/history/calendar_reform_comittee_report/04_PART_C_History_of_the_Calendar_in_different_Countries_through_the_Ages/06_Indian_Calendar/12_AP_5-D_Precession_of_the_Equinoxes_amongst_Indian_Astronomers/">12 AP 5-D Precession of the Equinoxes amongst Indian Astronomers </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -548,7 +550,7 @@
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/jyotiSham/history/calendar_reform_comittee_report/04_PART_C_History_of_the_Calendar_in_different_Countries_through_the_Ages/06_Indian_Calendar/13_APPENDIX_5-E_The_Jovian_Years/">13 APPENDIX 5-E The Jovian Years </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -571,7 +573,7 @@
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/jyotiSham/history/calendar_reform_comittee_report/04_PART_C_History_of_the_Calendar_in_different_Countries_through_the_Ages/06_Indian_Calendar/14_CORRIGENDA_AND_ADDENDA/">14 CORRIGENDA AND ADDENDA </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -594,7 +596,7 @@
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/jyotiSham/history/calendar_reform_comittee_report/04_PART_C_History_of_the_Calendar_in_different_Countries_through_the_Ages/06_Indian_Calendar/15_BIBLIOGRAPHY/">15 BIBLIOGRAPHY </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -617,7 +619,7 @@
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/jyotiSham/history/calendar_reform_comittee_report/04_PART_C_History_of_the_Calendar_in_different_Countries_through_the_Ages/06_Indian_Calendar/16_INDEX/">16 INDEX </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -657,7 +659,7 @@
     <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
     <div class="btn small border">
       
-      <a href="https://github.com/vishvAsa/jyotiSham/actions/workflows/build.yml"><img src="https://github.com/vishvAsa/jyotiSham/actions/workflows/build.yml/badge.svg"> Built </a> on 2022 Feb 3 14:01:08 UTC. (<a href="http://google.com/search?q=14%3a01%3a08%20UTC to IST">IST</a>)
+      <a href="https://github.com/vishvAsa/jyotiSham/actions/workflows/build.yml"><img src="https://github.com/vishvAsa/jyotiSham/actions/workflows/build.yml/badge.svg"> Built </a> on 2022 Feb 10 00:24:22 UTC. (<a href="http://google.com/search?q=00%3a24%3a22%20UTC to IST">IST</a>)
     </div>
   <ul id="footer-bar-right-custom" class="list-group list-group-horizontal">
   </ul>
